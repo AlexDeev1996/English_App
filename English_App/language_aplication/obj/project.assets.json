@@ -40,11 +40,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\language_aplication\\language_aplication\\language_aplication\\language_aplication.csproj",
+      "projectUniqueName": "C:\\Users\\Alex\\source\\repos\\English_App\\English_App\\language_aplication\\language_aplication.csproj",
       "projectName": "language_aplication",
-      "projectPath": "C:\\Users\\Alex\\source\\repos\\language_aplication\\language_aplication\\language_aplication\\language_aplication.csproj",
+      "projectPath": "C:\\Users\\Alex\\source\\repos\\English_App\\English_App\\language_aplication\\language_aplication.csproj",
       "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex\\source\\repos\\language_aplication\\language_aplication\\language_aplication\\obj\\",
+      "outputPath": "C:\\Users\\Alex\\source\\repos\\English_App\\English_App\\language_aplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

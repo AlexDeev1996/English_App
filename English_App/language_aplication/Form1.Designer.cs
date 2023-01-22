@@ -47,13 +47,22 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.transcriptionLebel = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(346, 167);
+            this.button1.Location = new System.Drawing.Point(320, 198);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 49);
             this.button1.TabIndex = 0;
@@ -64,7 +73,7 @@
             // wordTextBox
             // 
             this.wordTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.wordTextBox.Location = new System.Drawing.Point(40, 87);
+            this.wordTextBox.Location = new System.Drawing.Point(14, 73);
             this.wordTextBox.Name = "wordTextBox";
             this.wordTextBox.Size = new System.Drawing.Size(606, 43);
             this.wordTextBox.TabIndex = 1;
@@ -74,7 +83,7 @@
             // 
             this.wordLabel.AutoSize = true;
             this.wordLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.wordLabel.Location = new System.Drawing.Point(40, 39);
+            this.wordLabel.Location = new System.Drawing.Point(14, 25);
             this.wordLabel.Name = "wordLabel";
             this.wordLabel.Size = new System.Drawing.Size(83, 35);
             this.wordLabel.TabIndex = 3;
@@ -84,11 +93,11 @@
             // ru_de_RadioButton
             // 
             this.ru_de_RadioButton.AutoSize = true;
-            this.ru_de_RadioButton.Location = new System.Drawing.Point(669, 50);
+            this.ru_de_RadioButton.Location = new System.Drawing.Point(8, 20);
             this.ru_de_RadioButton.Name = "ru_de_RadioButton";
-            this.ru_de_RadioButton.Size = new System.Drawing.Size(82, 24);
+            this.ru_de_RadioButton.Size = new System.Drawing.Size(92, 24);
             this.ru_de_RadioButton.TabIndex = 4;
-            this.ru_de_RadioButton.Text = "RUS/DE";
+            this.ru_de_RadioButton.Text = "RUS/ENG";
             this.ru_de_RadioButton.UseVisualStyleBackColor = true;
             this.ru_de_RadioButton.CheckedChanged += new System.EventHandler(this.ru_de_RadioButton_CheckedChanged);
             // 
@@ -96,17 +105,17 @@
             // 
             this.de_ru_RadioButton.AutoSize = true;
             this.de_ru_RadioButton.Checked = true;
-            this.de_ru_RadioButton.Location = new System.Drawing.Point(669, 80);
+            this.de_ru_RadioButton.Location = new System.Drawing.Point(8, 50);
             this.de_ru_RadioButton.Name = "de_ru_RadioButton";
-            this.de_ru_RadioButton.Size = new System.Drawing.Size(82, 24);
+            this.de_ru_RadioButton.Size = new System.Drawing.Size(92, 24);
             this.de_ru_RadioButton.TabIndex = 5;
             this.de_ru_RadioButton.TabStop = true;
-            this.de_ru_RadioButton.Text = "DE/RUS";
+            this.de_ru_RadioButton.Text = "ENG/RUS";
             this.de_ru_RadioButton.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(40, 167);
+            this.button3.Location = new System.Drawing.Point(14, 198);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(300, 49);
             this.button3.TabIndex = 6;
@@ -118,7 +127,7 @@
             // 
             this.correctWordLabel.AutoSize = true;
             this.correctWordLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.correctWordLabel.Location = new System.Drawing.Point(40, 133);
+            this.correctWordLabel.Location = new System.Drawing.Point(14, 119);
             this.correctWordLabel.Name = "correctWordLabel";
             this.correctWordLabel.Size = new System.Drawing.Size(79, 31);
             this.correctWordLabel.TabIndex = 7;
@@ -128,7 +137,7 @@
             // translateLabel
             // 
             this.translateLabel.AutoSize = true;
-            this.translateLabel.Location = new System.Drawing.Point(565, 9);
+            this.translateLabel.Location = new System.Drawing.Point(195, 9);
             this.translateLabel.Name = "translateLabel";
             this.translateLabel.Size = new System.Drawing.Size(68, 20);
             this.translateLabel.TabIndex = 8;
@@ -139,7 +148,7 @@
             // 
             this.trueWordLabel.AutoSize = true;
             this.trueWordLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.trueWordLabel.Location = new System.Drawing.Point(133, 133);
+            this.trueWordLabel.Location = new System.Drawing.Point(107, 119);
             this.trueWordLabel.Name = "trueWordLabel";
             this.trueWordLabel.Size = new System.Drawing.Size(207, 31);
             this.trueWordLabel.TabIndex = 9;
@@ -150,7 +159,7 @@
             // 
             this.transriptionsLabel.AutoSize = true;
             this.transriptionsLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.transriptionsLabel.Location = new System.Drawing.Point(358, 39);
+            this.transriptionsLabel.Location = new System.Drawing.Point(332, 25);
             this.transriptionsLabel.Name = "transriptionsLabel";
             this.transriptionsLabel.Size = new System.Drawing.Size(183, 35);
             this.transriptionsLabel.TabIndex = 10;
@@ -169,7 +178,7 @@
             // 
             // totalResultButton
             // 
-            this.totalResultButton.Location = new System.Drawing.Point(669, 170);
+            this.totalResultButton.Location = new System.Drawing.Point(632, 282);
             this.totalResultButton.Name = "totalResultButton";
             this.totalResultButton.Size = new System.Drawing.Size(119, 46);
             this.totalResultButton.TabIndex = 12;
@@ -183,7 +192,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.resultListView.Location = new System.Drawing.Point(40, 222);
+            this.resultListView.Location = new System.Drawing.Point(14, 253);
             this.resultListView.Name = "resultListView";
             this.resultListView.Size = new System.Drawing.Size(606, 164);
             this.resultListView.TabIndex = 13;
@@ -230,15 +239,100 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(200, 18);
             // 
+            // transcriptionLebel
+            // 
+            this.transcriptionLebel.AutoSize = true;
+            this.transcriptionLebel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.transcriptionLebel.Location = new System.Drawing.Point(107, 154);
+            this.transcriptionLebel.Name = "transcriptionLebel";
+            this.transcriptionLebel.Size = new System.Drawing.Size(156, 30);
+            this.transcriptionLebel.TabIndex = 15;
+            this.transcriptionLebel.Text = "транскрипция";
+            this.transcriptionLebel.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox1.Controls.Add(this.ru_de_RadioButton);
+            this.groupBox1.Controls.Add(this.de_ru_RadioButton);
+            this.groupBox1.Location = new System.Drawing.Point(635, 183);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(126, 81);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "2000 words";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.checkBox3);
+            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Location = new System.Drawing.Point(635, 10);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(126, 160);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Irregular Verbs";
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(652, 110);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(16, 21);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 29);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "On Verbs";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(10, 132);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(93, 24);
+            this.checkBox4.TabIndex = 4;
+            this.checkBox4.Text = "all forms ";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.Visible = false;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(11, 108);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(102, 24);
+            this.checkBox3.TabIndex = 3;
+            this.checkBox3.Text = "third form ";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Visible = false;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(10, 85);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(118, 24);
+            this.checkBox2.TabIndex = 2;
+            this.checkBox2.Text = "second form ";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Visible = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(10, 61);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(92, 24);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "first form";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             // 
             // Form1
             // 
@@ -247,7 +341,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.transcriptionLebel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.resultListView);
             this.Controls.Add(this.totalResultButton);
@@ -257,17 +353,19 @@
             this.Controls.Add(this.translateLabel);
             this.Controls.Add(this.correctWordLabel);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.de_ru_RadioButton);
-            this.Controls.Add(this.ru_de_RadioButton);
             this.Controls.Add(this.wordLabel);
             this.Controls.Add(this.wordTextBox);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed); 
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +392,13 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripProgressBar toolStripProgressBar1;
+        private Label transcriptionLebel;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private CheckBox checkBox4;
+        private CheckBox checkBox3;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
         private Button button2;
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v0pdgrzAURwIa4k0KPrryJzhloERRyEFJQGkIjgqBDS3kF7bg3TzSeFDloiPCTg6wzzmGHK5HpXKBqCDcoQWQg==",
+  "dgSpecHash": "76+nRwQa03qrkvubWPsJ7JpgNTNWbGXpdcHFcfMfliNEidu5Ruzay5PWnng1fdFn6xXof1YPkiMhTuuOSw4Tcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\source\\repos\\language_aplication\\language_aplication\\language_aplication\\language_aplication.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\source\\repos\\English_App\\English_App\\language_aplication\\language_aplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
   ],

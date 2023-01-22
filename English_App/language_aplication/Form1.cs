@@ -18,7 +18,7 @@ namespace language_aplication
         Excel.Range cell4 = null;
         int count = 1;
         int count_button = 0;
-        string path_word = @"C:\Users\Alex\source\repos\language_aplication\appDE.xlsx";
+        string path_word = @"C:\Users\Alex\source\repos\English_App\appDATA.xlsx";
         string check_word = "";
         string deWord = "";
         string ruWord = "";
@@ -151,44 +151,33 @@ namespace language_aplication
         private void button1_Click(object sender, EventArgs e)
         {
             wordLabel.Visible = true;
-
-            int random = rand.Next(2, 1580);
+            transcriptionLebel.Visible = false;
+            int random = rand.Next(1, 1999);
             button1.Text = "Далее";
             if (de_ru)
             {
                 transriptionsLabel.Visible = true;
-                cell1 = (Excel.Range)worksheet.Cells[random, 2]; //de
-                cell2 = (Excel.Range)worksheet.Cells[random, 5]; //ru
-                cell3 = (Excel.Range)worksheet.Cells[random, 1]; //artikl
-                cell4 = (Excel.Range)worksheet.Cells[random, 4]; //транскрипция
+                cell1 = (Excel.Range)worksheet.Cells[random, 5]; //de
+                cell2 = (Excel.Range)worksheet.Cells[random, 7]; //ru
+                cell4 = (Excel.Range)worksheet.Cells[random, 6]; //транскрипция
 
-                transkriotionsWord = Convert.ToString(cell4.Value2);
-                deWord = Convert.ToString(cell1.Value2);
-                translateWord = Convert.ToString(cell2.Value2);
-                translateLabel.Text = translateWord;
-                check_word = Convert.ToString(cell3.Value2);
-                wordLabel.Text = check_word + " " + deWord;
-                transriptionsLabel.Text = transkriotionsWord;
+                translateLabel.Text = Convert.ToString(cell2.Value2);
+                wordLabel.Text = Convert.ToString(cell1.Value2);
+                transriptionsLabel.Text = Convert.ToString(cell4.Value2);
             }
 
            if(ru_de)
            {
                 transriptionsLabel.Visible = false;
-                cell1 = (Excel.Range)worksheet.Cells[random, 2]; //de
-                cell2 = (Excel.Range)worksheet.Cells[random, 5]; //ru
-                cell3 = (Excel.Range)worksheet.Cells[random, 1]; //artikl
+                cell1 = (Excel.Range)worksheet.Cells[random, 5]; //de
+                cell2 = (Excel.Range)worksheet.Cells[random, 7]; //ru
+                cell4 = (Excel.Range)worksheet.Cells[random, 6]; //транскрипция
 
-                ruWord = Convert.ToString(cell2.Value2);
-                translateWord = Convert.ToString(cell1.Value2);
-                translateLabel.Text = translateWord;
-                check_word = Convert.ToString(cell3.Value2);
-                wordLabel.Text = ruWord;
+                translateLabel.Text = Convert.ToString(cell1.Value2);
+                transcriptionLebel.Text = Convert.ToString(cell4.Value2);
+                wordLabel.Text = Convert.ToString(cell2.Value2);
             }
-            //  resultListView.Items.Add()
-              //  translateLabel.Text
-              //  wordTextBox.Text
-
-            //wordLabel.Text = word;
+            
             wordTextBox.Text = "";
             correctWordLabel.Text = "";
             trueWordLabel.Text = "";
@@ -199,6 +188,9 @@ namespace language_aplication
 
         private void button3_Click(object sender, EventArgs e) //Button compare
         {
+           
+            if (ru_de) transcriptionLebel.Visible = true;
+            if (de_ru)  transcriptionLebel.Visible = false;
             correctWordLabel.Visible = true;
             trueWordLabel.Visible = true;
             CompareWord(translateLabel.Text, wordTextBox.Text);
@@ -249,18 +241,35 @@ namespace language_aplication
             else base.OnKeyPress(e);
         }
 
+
+
         private void button2_Click(object sender, EventArgs e)
         {
-            //SpeechSynthesizer synth = new SpeechSynthesizer();
-            //// System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("deu-DEU");
-            //synth.SetOutputToDefaultAudioDevice();
-            //// synth.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Senior, 2 ,culture);
-            //synth.Volume = 100;// от 0 до 100
-            //synth.Rate = 0;//от -10 до 10
-            //synth.SpeakAsync(wordLabel.Text);
-            ////synth.Speak(wordLabel.Text);
+          
+            if (!checkBox1.Visible)
+            {
+                groupBox2.Height = 160;
+                checkBox1.Visible = true;
+                checkBox2.Visible = true;
+                checkBox3.Visible = true;
+                checkBox4.Visible = true;
+            }
+
+            if (checkBox1.Visible)
+            {
+                groupBox2.Height = 55;
+                checkBox1.Visible = false;
+                checkBox2.Visible = false;
+                checkBox3.Visible = false;
+                checkBox4.Visible = false;
+            }
+               
+
         }
 
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
