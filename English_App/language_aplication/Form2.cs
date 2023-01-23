@@ -143,7 +143,7 @@ namespace language_aplication
                 105 => (2119, 2139),
                 106 => (2141, 216),
                 107 => (2162, 2181),
-                _ => (-1, -1)
+                _ => (0, 0)
             };
         }
 
@@ -162,7 +162,7 @@ namespace language_aplication
                 var number = numberFunc(index);
 
                 random = rand.Next(number.Item1, number.Item2);
-                cell1 = worksheet.Cells[random, 1]; //de
+                cell1 = worksheet.Cells[random, 1]; //eng
                 cell2 = worksheet.Cells[random, 2]; //ru
 
                 deSentence = Convert.ToString(cell1.Value2);
@@ -177,7 +177,7 @@ namespace language_aplication
                 var number = numberFunc(index);
 
                 random = rand.Next(number.Item1, number.Item2);
-                cell1 = worksheet.Cells[random, 1]; //de
+                cell1 = worksheet.Cells[random, 1]; //eng
                 cell2 = worksheet.Cells[random, 2]; //ru
 
                 deSentence = Convert.ToString(cell1.Value2);
@@ -211,7 +211,7 @@ namespace language_aplication
 
             this.KeyPreview = true;
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyUp);
-         
+            temaComboBox.SelectedIndex = 0;
         }
         private void Form2_KeyUp(object? sender, KeyEventArgs e)
         {
@@ -245,7 +245,7 @@ namespace language_aplication
         {
             if (ru_de_RadioButton2.Checked)
             {
-                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("deu-DEU"));
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("en-US"));
                 ru_de = true;
                 de_ru = false;
             }
@@ -272,7 +272,7 @@ namespace language_aplication
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Проверить
         {
             if (de_ru)
             {

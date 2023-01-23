@@ -47,7 +47,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(241, 166);
+            this.button1.Location = new System.Drawing.Point(238, 319);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(289, 46);
             this.button1.TabIndex = 0;
@@ -57,20 +57,21 @@
             // 
             // sentenceLabel
             // 
-            this.sentenceLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sentenceLabel.Location = new System.Drawing.Point(12, 9);
+            this.sentenceLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sentenceLabel.Location = new System.Drawing.Point(3, 6);
             this.sentenceLabel.Name = "sentenceLabel";
-            this.sentenceLabel.Size = new System.Drawing.Size(776, 63);
+            this.sentenceLabel.Size = new System.Drawing.Size(776, 116);
             this.sentenceLabel.TabIndex = 1;
             this.sentenceLabel.Text = "DE WORD";
             this.sentenceLabel.Visible = false;
             // 
             // sentenceTextBox
             // 
-            this.sentenceTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sentenceTextBox.Location = new System.Drawing.Point(12, 72);
+            this.sentenceTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sentenceTextBox.Location = new System.Drawing.Point(3, 125);
+            this.sentenceTextBox.Multiline = true;
             this.sentenceTextBox.Name = "sentenceTextBox";
-            this.sentenceTextBox.Size = new System.Drawing.Size(767, 38);
+            this.sentenceTextBox.Size = new System.Drawing.Size(794, 65);
             this.sentenceTextBox.TabIndex = 2;
             this.sentenceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sentenceTextBox_KeyPress);
             // 
@@ -87,7 +88,7 @@
             // ru_de_RadioButton2
             // 
             this.ru_de_RadioButton2.AutoSize = true;
-            this.ru_de_RadioButton2.Location = new System.Drawing.Point(8, 14);
+            this.ru_de_RadioButton2.Location = new System.Drawing.Point(6, 10);
             this.ru_de_RadioButton2.Name = "ru_de_RadioButton2";
             this.ru_de_RadioButton2.Size = new System.Drawing.Size(92, 24);
             this.ru_de_RadioButton2.TabIndex = 4;
@@ -99,7 +100,7 @@
             // 
             this.de_ru_RadioButton2.AutoSize = true;
             this.de_ru_RadioButton2.Checked = true;
-            this.de_ru_RadioButton2.Location = new System.Drawing.Point(8, 44);
+            this.de_ru_RadioButton2.Location = new System.Drawing.Point(6, 40);
             this.de_ru_RadioButton2.Name = "de_ru_RadioButton2";
             this.de_ru_RadioButton2.Size = new System.Drawing.Size(92, 24);
             this.de_ru_RadioButton2.TabIndex = 5;
@@ -109,7 +110,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 166);
+            this.button3.Location = new System.Drawing.Point(9, 319);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(223, 46);
             this.button3.TabIndex = 6;
@@ -119,10 +120,10 @@
             // 
             // correctLabel
             // 
-            this.correctLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.correctLabel.Location = new System.Drawing.Point(12, 112);
+            this.correctLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.correctLabel.Location = new System.Drawing.Point(8, 193);
             this.correctLabel.Name = "correctLabel";
-            this.correctLabel.Size = new System.Drawing.Size(767, 55);
+            this.correctLabel.Size = new System.Drawing.Size(663, 121);
             this.correctLabel.TabIndex = 7;
             this.correctLabel.Text = "Correct Sentence";
             this.correctLabel.Visible = false;
@@ -130,10 +131,10 @@
             // infoTextBox
             // 
             this.infoTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.infoTextBox.Location = new System.Drawing.Point(12, 261);
+            this.infoTextBox.Location = new System.Drawing.Point(502, 402);
             this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
-            this.infoTextBox.Size = new System.Drawing.Size(674, 143);
+            this.infoTextBox.Size = new System.Drawing.Size(288, 40);
             this.infoTextBox.TabIndex = 8;
             this.infoTextBox.Text = "Премечание";
             this.infoTextBox.Visible = false;
@@ -260,7 +261,7 @@
             "113 Глагол с предлогом в английском, фразовые глаголы",
             "114 Phrasal verbs (Фразовые глаголы английского языка), урок 1",
             "115 Phrasal verbs (Фразовые глаголы английского языка), урок 2"});
-            this.temaComboBox.Location = new System.Drawing.Point(583, 166);
+            this.temaComboBox.Location = new System.Drawing.Point(592, 6);
             this.temaComboBox.Name = "temaComboBox";
             this.temaComboBox.Size = new System.Drawing.Size(205, 28);
             this.temaComboBox.TabIndex = 10;
@@ -278,12 +279,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 226);
+            this.button4.Location = new System.Drawing.Point(402, 413);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 29);
             this.button4.TabIndex = 14;
             this.button4.Text = "INFO";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form2

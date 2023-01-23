@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\English_App",
+    "\\English_App\\language_aplication"
   ],
-  "SelectedNode": "\\C:\\Users\\Alex\\Source\\Repos\\English_App",
+  "SelectedNode": "\\English_App\\language_aplication.sln",
   "PreviewInSolutionExplorer": false
 }

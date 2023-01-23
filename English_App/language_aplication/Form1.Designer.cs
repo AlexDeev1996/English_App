@@ -50,11 +50,11 @@
             this.transcriptionLebel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.all_forms_radioButton4 = new System.Windows.Forms.RadioButton();
+            this.first_form_radioButton1 = new System.Windows.Forms.RadioButton();
+            this.third_form_radioButton3 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.second_form_radioButton2 = new System.Windows.Forms.RadioButton();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -265,17 +265,53 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.all_forms_radioButton4);
+            this.groupBox2.Controls.Add(this.first_form_radioButton1);
+            this.groupBox2.Controls.Add(this.third_form_radioButton3);
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.second_form_radioButton2);
             this.groupBox2.Location = new System.Drawing.Point(635, 10);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(126, 160);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Irregular Verbs";
+            // 
+            // all_forms_radioButton4
+            // 
+            this.all_forms_radioButton4.AutoSize = true;
+            this.all_forms_radioButton4.Location = new System.Drawing.Point(10, 132);
+            this.all_forms_radioButton4.Name = "all_forms_radioButton4";
+            this.all_forms_radioButton4.Size = new System.Drawing.Size(92, 24);
+            this.all_forms_radioButton4.TabIndex = 21;
+            this.all_forms_radioButton4.TabStop = true;
+            this.all_forms_radioButton4.Text = "all forms ";
+            this.all_forms_radioButton4.UseVisualStyleBackColor = true;
+            this.all_forms_radioButton4.Visible = false;
+            // 
+            // first_form_radioButton1
+            // 
+            this.first_form_radioButton1.AutoSize = true;
+            this.first_form_radioButton1.Location = new System.Drawing.Point(10, 66);
+            this.first_form_radioButton1.Name = "first_form_radioButton1";
+            this.first_form_radioButton1.Size = new System.Drawing.Size(91, 24);
+            this.first_form_radioButton1.TabIndex = 22;
+            this.first_form_radioButton1.TabStop = true;
+            this.first_form_radioButton1.Text = "first form";
+            this.first_form_radioButton1.UseVisualStyleBackColor = true;
+            this.first_form_radioButton1.Visible = false;
+            // 
+            // third_form_radioButton3
+            // 
+            this.third_form_radioButton3.AutoSize = true;
+            this.third_form_radioButton3.Location = new System.Drawing.Point(10, 111);
+            this.third_form_radioButton3.Name = "third_form_radioButton3";
+            this.third_form_radioButton3.Size = new System.Drawing.Size(101, 24);
+            this.third_form_radioButton3.TabIndex = 20;
+            this.third_form_radioButton3.TabStop = true;
+            this.third_form_radioButton3.Text = "third form ";
+            this.third_form_radioButton3.UseVisualStyleBackColor = true;
+            this.third_form_radioButton3.Visible = false;
             // 
             // button2
             // 
@@ -289,50 +325,17 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // checkBox4
+            // second_form_radioButton2
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(10, 132);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(93, 24);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "all forms ";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.Visible = false;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(11, 108);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(102, 24);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "third form ";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.Visible = false;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(10, 85);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(118, 24);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "second form ";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Visible = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(10, 61);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(92, 24);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "first form";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Visible = false;
+            this.second_form_radioButton2.AutoSize = true;
+            this.second_form_radioButton2.Location = new System.Drawing.Point(10, 87);
+            this.second_form_radioButton2.Name = "second_form_radioButton2";
+            this.second_form_radioButton2.Size = new System.Drawing.Size(117, 24);
+            this.second_form_radioButton2.TabIndex = 19;
+            this.second_form_radioButton2.TabStop = true;
+            this.second_form_radioButton2.Text = "second form ";
+            this.second_form_radioButton2.UseVisualStyleBackColor = true;
+            this.second_form_radioButton2.Visible = false;
             // 
             // Form1
             // 
@@ -395,10 +398,10 @@
         private Label transcriptionLebel;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
         private Button button2;
+        private RadioButton second_form_radioButton2;
+        private RadioButton third_form_radioButton3;
+        private RadioButton all_forms_radioButton4;
+        private RadioButton first_form_radioButton1;
     }
 }

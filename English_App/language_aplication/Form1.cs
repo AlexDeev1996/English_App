@@ -25,9 +25,12 @@ namespace language_aplication
         string translateWord = "";
         string transkriotionsWord = "";
 
+        int[] index_exel_verbs = new int[3] { 10, 12 , 14 };
+        int[] index_exel_verbs_transkript = new int[3] { 11, 13, 15 };
+
         Random rand = new Random();
-        bool ru_de = false;
-        bool de_ru = true;
+        bool ru_eng = false;
+        bool eng_ru = true;
         bool button_visible = false;
         static int count_ListView = 0;
         static int count_progress_true = 0;
@@ -110,8 +113,8 @@ namespace language_aplication
             Type.Missing, Type.Missing, Type.Missing, Type.Missing,
             Type.Missing, Type.Missing, Type.Missing, Type.Missing,
             Type.Missing, Type.Missing);
+            groupBox2.Height = 55;
 
-            
             //добавляем новую рабочую книгу в коллекцию
             //workbook = workbooks.Add(Type.Missing);
             worksheets = workbook.Worksheets; //получаем доступ к коллекции рабочих листов
@@ -153,31 +156,130 @@ namespace language_aplication
             wordLabel.Visible = true;
             transcriptionLebel.Visible = false;
             int random = rand.Next(1, 1999);
+            int random_for_verbs = rand.Next(1, 138);
+            int random_3 = rand.Next(0,2);
             button1.Text = "Далее";
-            if (de_ru)
+            if (eng_ru)
             {
-                transriptionsLabel.Visible = true;
-                cell1 = (Excel.Range)worksheet.Cells[random, 5]; //de
-                cell2 = (Excel.Range)worksheet.Cells[random, 7]; //ru
-                cell4 = (Excel.Range)worksheet.Cells[random, 6]; //транскрипция
 
-                translateLabel.Text = Convert.ToString(cell2.Value2);
-                wordLabel.Text = Convert.ToString(cell1.Value2);
-                transriptionsLabel.Text = Convert.ToString(cell4.Value2);
+                transriptionsLabel.Visible = true;
+                if (first_form_radioButton1.Visible)
+                {
+                    if (first_form_radioButton1.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, 10]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, 11]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell2.Value2);
+                        wordLabel.Text = Convert.ToString(cell1.Value2);
+                        transriptionsLabel.Text = Convert.ToString(cell4.Value2);
+                    }
+                    if (second_form_radioButton2.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, 12]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, 13]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell2.Value2);
+                        wordLabel.Text = Convert.ToString(cell1.Value2);
+                        transriptionsLabel.Text = Convert.ToString(cell4.Value2);
+                    }
+                    if (third_form_radioButton3.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, 14]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, 15]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell2.Value2);
+                        wordLabel.Text = Convert.ToString(cell1.Value2);
+                        transriptionsLabel.Text = Convert.ToString(cell4.Value2);
+                    }
+                    if (all_forms_radioButton4.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, index_exel_verbs[random_3]]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, index_exel_verbs_transkript[random_3]]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell2.Value2);
+                        wordLabel.Text = Convert.ToString(cell1.Value2);
+                        transriptionsLabel.Text = Convert.ToString(cell4.Value2);
+                    }
+                }
+                else
+                {
+                    cell1 = (Excel.Range)worksheet.Cells[random, 5]; //eng
+                    cell2 = (Excel.Range)worksheet.Cells[random, 7]; //ru
+                    cell4 = (Excel.Range)worksheet.Cells[random, 6]; //транскрипция
+
+                    translateLabel.Text = Convert.ToString(cell2.Value2);
+                    wordLabel.Text = Convert.ToString(cell1.Value2);
+                    transriptionsLabel.Text = Convert.ToString(cell4.Value2);
+                }
+
             }
 
-           if(ru_de)
+           if(ru_eng)
            {
                 transriptionsLabel.Visible = false;
-                cell1 = (Excel.Range)worksheet.Cells[random, 5]; //de
-                cell2 = (Excel.Range)worksheet.Cells[random, 7]; //ru
-                cell4 = (Excel.Range)worksheet.Cells[random, 6]; //транскрипция
 
-                translateLabel.Text = Convert.ToString(cell1.Value2);
-                transcriptionLebel.Text = Convert.ToString(cell4.Value2);
-                wordLabel.Text = Convert.ToString(cell2.Value2);
+                if (first_form_radioButton1.Visible)
+                {
+                    if (first_form_radioButton1.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, 10]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, 11]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell1.Value2);
+                        transcriptionLebel.Text = Convert.ToString(cell4.Value2);
+                        wordLabel.Text = Convert.ToString(cell2.Value2);
+                    }
+                    if (second_form_radioButton2.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, 12]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, 13]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell1.Value2);
+                        transcriptionLebel.Text = Convert.ToString(cell4.Value2);
+                        wordLabel.Text = Convert.ToString(cell2.Value2);
+                    }
+                    if (third_form_radioButton3.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, 14]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, 15]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell1.Value2);
+                        transcriptionLebel.Text = Convert.ToString(cell4.Value2);
+                        wordLabel.Text = Convert.ToString(cell2.Value2);
+
+                    }
+                    if (all_forms_radioButton4.Checked)
+                    {
+                        cell1 = (Excel.Range)worksheet.Cells[random_for_verbs, index_exel_verbs[random_3]]; //eng
+                        cell2 = (Excel.Range)worksheet.Cells[random_for_verbs, 16]; //ru
+                        cell4 = (Excel.Range)worksheet.Cells[random_for_verbs, index_exel_verbs_transkript[random_3]]; //транскрипция
+
+                        translateLabel.Text = Convert.ToString(cell1.Value2);
+                        transcriptionLebel.Text = Convert.ToString(cell4.Value2);
+                        wordLabel.Text = Convert.ToString(cell2.Value2);
+                    }
+                }
+                else
+                {
+                    cell1 = (Excel.Range)worksheet.Cells[random, 5]; //eng
+                    cell2 = (Excel.Range)worksheet.Cells[random, 7]; //ru
+                    cell4 = (Excel.Range)worksheet.Cells[random, 6]; //транскрипция
+
+                    translateLabel.Text = Convert.ToString(cell1.Value2);
+                    transcriptionLebel.Text = Convert.ToString(cell4.Value2);
+                    wordLabel.Text = Convert.ToString(cell2.Value2);
+                }
             }
-            
+
+
             wordTextBox.Text = "";
             correctWordLabel.Text = "";
             trueWordLabel.Text = "";
@@ -189,8 +291,8 @@ namespace language_aplication
         private void button3_Click(object sender, EventArgs e) //Button compare
         {
            
-            if (ru_de) transcriptionLebel.Visible = true;
-            if (de_ru)  transcriptionLebel.Visible = false;
+            if (ru_eng) transcriptionLebel.Visible = true;
+            if (eng_ru)  transcriptionLebel.Visible = false;
             correctWordLabel.Visible = true;
             trueWordLabel.Visible = true;
             CompareWord(translateLabel.Text, wordTextBox.Text);
@@ -200,16 +302,16 @@ namespace language_aplication
         {
             if (ru_de_RadioButton.Checked)
             {
-                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("deu-DEU"));
-                ru_de = true;
-                de_ru = false;
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("en-US"));
+                ru_eng = true;
+                eng_ru = false;
             }
 
             if (de_ru_RadioButton.Checked)
             {
                 InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("ru-RU"));
-                de_ru = true;
-                ru_de = false;
+                eng_ru = true;
+                ru_eng = false;
             }
         }
 
@@ -245,31 +347,26 @@ namespace language_aplication
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
-            if (!checkBox1.Visible)
+            if (!first_form_radioButton1.Visible)
             {
                 groupBox2.Height = 160;
-                checkBox1.Visible = true;
-                checkBox2.Visible = true;
-                checkBox3.Visible = true;
-                checkBox4.Visible = true;
+                first_form_radioButton1.Visible = true;
+                second_form_radioButton2.Visible = true;
+                third_form_radioButton3.Visible = true;
+                all_forms_radioButton4.Visible = true;
+            }   
+            else
+                {
+                    groupBox2.Height = 55;
+                    first_form_radioButton1.Visible = false;
+                second_form_radioButton2.Visible = false;
+                third_form_radioButton3.Visible = false;
+                all_forms_radioButton4.Visible = false;
+                first_form_radioButton1.Checked = false;
+                second_form_radioButton2.Checked = false;
+                third_form_radioButton3.Checked = false;
+                all_forms_radioButton4.Checked = false;
             }
-
-            if (checkBox1.Visible)
-            {
-                groupBox2.Height = 55;
-                checkBox1.Visible = false;
-                checkBox2.Visible = false;
-                checkBox3.Visible = false;
-                checkBox4.Visible = false;
-            }
-               
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
